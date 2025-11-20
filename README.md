@@ -12,7 +12,6 @@ Das Script prüft regenmäßig die Feuchtigkeit der Erde und gibt eine Rückgabe
 - 🌡️ **Rückgabe** von Boolen (nass/trocken) 
 - 🚨 **Warnung bei Trockenheit** (Konsole, LED)
 - 🕐 **Konfigurierbares Intervall** zur Minderung der Korrosion
-- (📝 Option für **Logging & Erweiterungen** (z. B. Telegram Notifications))
 
 ---
 
@@ -21,7 +20,7 @@ Das Script prüft regenmäßig die Feuchtigkeit der Erde und gibt eine Rückgabe
 ### Benötigte Komponenten
 - Raspberry Pi (mit aktiviertem SPI)
 - 4 mal 330 Ω Widerstände
-- 1 mal 1kΩ Widerstand
+- 2 mal 1kΩ Widerstand
 - 1 mal LED
 - Kabel
 
