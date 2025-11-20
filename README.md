@@ -76,7 +76,7 @@ oder
 ## ▶️ Script starten (nur Raspberry Pi)
 
 ```bash
-python feuchtigkeitssensor.py
+python feuchtigkeits_sensor.py
 ```
 
 ### Verdrahtung
