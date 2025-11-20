@@ -45,7 +45,7 @@ oder
 ### Libraries installieren
 ```bash
 sudo apt update
-sudo apt install python3-rpi-gpio
+sudo apt install python-rpi-gpio
 ```
 
 ## 🪟 Windows Nutzer
@@ -76,7 +76,7 @@ oder
 ## ▶️ Script starten (nur Raspberry Pi)
 
 ```bash
-python3 feuchtigkeitssensor.py
+python feuchtigkeitssensor.py
 ```
 
 ### Verdrahtung
