@@ -24,53 +24,60 @@ Das Script prüft regenmäßig die Feuchtigkeit der Erde und gibt eine Rückgabe
 - 1 mal LED
 - Kabel
 
-🧰 Installation & benötigte Libraries
+# 🧰 Installation & benötigte Libraries
 
-Für die Ansteuerung der GPIO-Pins verwendet das Projekt die Python-Bibliothek RPi.GPIO.
-Sie ist notwendig, um die Feuchtigkeit auszulesen und die LED anzusteuern.
+Dieses Projekt nutzt die Python-Bibliothek **RPi.GPIO**, um GPIO-Pins des Raspberry Pi anzusteuern.  
+Damit wird sowohl der Feuchtigkeitssensor ausgelesen als auch eine LED gesteuert.
 
-Hinweis: Die Bibliothek funktioniert nur auf einem echten Raspberry Pi.
-Unter Windows oder macOS kann das Script bearbeitet, aber nicht ausgeführt werden.
+> **Hinweis:**  
+> Die Bibliothek funktioniert **nur auf einem echten Raspberry Pi**.  
+> Unter Windows und macOS kann das Script bearbeitet, aber **nicht ausgeführt** werden.
 
-💻 Installation auf dem Raspberry Pi
+---
 
-Terminal öffnen
+## 💻 Installation auf dem Raspberry Pi
 
-Raspberry-Menü → Accessories → Terminal
-oder
+### Terminal öffnen
+- Raspberry-Menü → **Accessories → Terminal**  
+oder  
+- **Ctrl + Alt + T**
 
-Ctrl + Alt + T drücken
-
-Library installieren
-
+### Libraries installieren
+```bash
 sudo apt update
 sudo apt install python3-rpi-gpio
+```
 
+## 🪟 Windows Nutzer
 
-Damit ist die Umgebung vollständig eingerichtet.
+Unter Windows können keine Raspberry-Pi-GPIO-Pins angesprochen werden.  
+Das Script kann **nicht ausgeführt**, aber normal **bearbeitet** werden.
 
-🪟 Windows Nutzer
+### CMD öffnen
+- Startmenü → **cmd** eingeben → Enter
 
-Unter Windows können die GPIOs nicht genutzt werden.
-Das Script kann dort nicht ausgeführt, aber problemlos bearbeitet werden.
+### PowerShell öffnen
+- Startmenü → **PowerShell** eingeben → Enter
 
-CMD öffnen:
-Startmenü → „cmd“ eingeben → Enter
+---
 
-PowerShell öffnen:
-Startmenü → „PowerShell“ eingeben → Enter
+## 🍎 macOS Nutzer
 
-🍎 macOS Nutzer
+Auch macOS kann keine Raspberry-Pi-GPIOs ansteuern.  
+Das Script kann hier nur **bearbeitet oder verwaltet** werden.
 
-Auch macOS kann kein Raspberry-Pi-GPIO ansteuern.
-Das Script lässt sich aber bearbeiten oder für GitHub verwalten.
+### Terminal öffnen
+- **CMD + Leertaste** → „Terminal“ eingeben → Enter  
+oder  
+- Finder → **Programme → Dienstprogramme → Terminal**
 
-Terminal öffnen:
-CMD + Leertaste → „Terminal“ eingeben → Enter
-oder Finder → Programme → Dienstprogramme → Terminal
+---
 
-▶️ Script starten (nur Raspberry Pi)
+## ▶️ Script starten (nur Raspberry Pi)
+
+```bash
 python3 feuchtigkeitssensor.py
+```
 
 ### Verdrahtung
 Siehe https://github.com/Nathanyiel/Raspi-Feuchtigkeitssensor/blob/main/Feuchtigkeitssensor_Schaltplan.drawio.png
