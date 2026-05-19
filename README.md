@@ -1,85 +1,77 @@
-# Raspi-Feuchtigkeitssensor # 🌱 Plant Moisture Monitor
+# Raspi Moisture Sensor # 🌱 Plant Moisture Monitor
 
-Ein Raspberry Pi Projekt zur **Überwachung der Bodenfeuchtigkeit** von Pflanzen mit einfachen Mitteln.  
-Das Script prüft regenmäßig die Feuchtigkeit der Erde und gibt eine Rückgabe über eine LED und die Console.  
+A Raspberry Pi project to **monitor soil moisture** using simple components.  
+The script regularly checks the soil moisture and provides feedback via an LED and the console.  
 
-> Ziel: Nie wieder vergessen, die Pflanze zu gießen! 💧
+> Goal: Never forget to water your plants again! 💧
 
 ---
 
 ## ✨ Features
-- 📊 **Messung der Bodenfeuchtigkeit** mit einfachen Mitteln
-- 🌡️ **Rückgabe** von Boolen (nass/trocken) 
-- 🚨 **Warnung bei Trockenheit** (Konsole, LED)
-- 🕐 **Konfigurierbares Intervall** zur Minderung der Korrosion
+- 📊 **Soil moisture measurement** using simple components
+- 🌡️ **Boolean output** (wet/dry)  
+- 🚨 **Dryness alert** (Console, LED)
+- 🕐 **Configurable interval** to reduce probe corrosion
 
 ---
 
 ## 🔧 Hardware Setup
 
-### Benötigte Komponenten
-- Raspberry Pi (mit aktiviertem SPI)
-- 4 mal 330 Ω Widerstände
-- 2 mal 1kΩ Widerstand
-- 1 mal LED
-- Kabel
+### Required Components
+- Raspberry Pi (with SPI enabled)
+- 4x 330 Ω resistors
+- 2x 1 kΩ resistors
+- 1x LED
+- Jumper wires
 
-# 🧰 Installation & benötigte Libraries
+# 🧰 Installation & Required Libraries
 
-Dieses Projekt nutzt die Python-Bibliothek **RPi.GPIO**, um GPIO-Pins des Raspberry Pi anzusteuern.  
-Damit wird sowohl der Feuchtigkeitssensor ausgelesen als auch eine LED gesteuert.
+This project uses the Python library **RPi.GPIO** to control the GPIO pins of the Raspberry Pi.  
+It is used to both read the moisture sensor and control an LED.
 
-> **Hinweis:**  
-> Die Bibliothek funktioniert **nur auf einem echten Raspberry Pi**.  
-> Unter Windows und macOS kann das Script bearbeitet, aber **nicht ausgeführt** werden.
+> **Note:** > This library **only works on an actual Raspberry Pi**.  
+> You can edit the script on Windows or macOS, but you **cannot run it**.
 
 ---
 
-## 💻 Installation auf dem Raspberry Pi
+## 💻 Installation on the Raspberry Pi
 
-### Terminal öffnen
-- Raspberry-Menü → **Accessories → Terminal**  
-oder  
+### Open Terminal
+- Raspberry Menu → **Accessories → Terminal** or  
 - **Ctrl + Alt + T**
 
-### Libraries installieren
+### Install Libraries
 ```bash
 sudo apt update
 sudo apt install python-rpi-gpio
 ```
 
-## 🪟 Windows Nutzer
+## 🪟 Windows Users
 
-Unter Windows können keine Raspberry-Pi-GPIO-Pins angesprochen werden.  
-Das Script kann **nicht ausgeführt**, aber normal **bearbeitet** werden.
+Windows cannot interface with Raspberry Pi GPIO pins.  
+The script **cannot be executed**, but it can be **edited** normally.
 
-### CMD öffnen
-- Startmenü → **cmd** eingeben → Enter
+### Open CMD
+- Start Menu → type **cmd** → Enter
 
-### PowerShell öffnen
-- Startmenü → **PowerShell** eingeben → Enter
-
----
-
-## 🍎 macOS Nutzer
-
-Auch macOS kann keine Raspberry-Pi-GPIOs ansteuern.  
-Das Script kann hier nur **bearbeitet oder verwaltet** werden.
-
-### Terminal öffnen
-- **CMD + Leertaste** → „Terminal“ eingeben → Enter  
-oder  
-- Finder → **Programme → Dienstprogramme → Terminal**
+### Open PowerShell
+- Start Menu → type **PowerShell** → Enter
 
 ---
 
-## ▶️ Script starten (nur Raspberry Pi)
+## 🍎 macOS Users
+
+macOS also cannot control Raspberry Pi GPIOs.  
+The script can only be **edited or managed** here.
+
+### Open Terminal
+- **Cmd + Spacebar** → type "Terminal" → Enter  
+or  
+- Finder → **Applications → Utilities → Terminal**
+
+---
+
+## ▶️ Running the Script (Raspberry Pi only)
 
 ```bash
 python feuchtigkeits_sensor.py
-```
-
-### Verdrahtung
-Siehe https://github.com/Nathanyiel/Raspi-Feuchtigkeitssensor/blob/main/Feuchtigkeitssensor_Schaltplan.drawio.png
-
----
